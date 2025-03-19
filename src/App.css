@@ -1,0 +1,244 @@
+/* App.css */
+
+/* CSS เดิม */
+.App {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+select,
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+select:focus,
+input[type="file"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+input[type="file"] {
+  padding: 5px;
+}
+
+/* CSS สำหรับส่วนผลลัพธ์ */
+.result {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: left;
+}
+
+.result h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.result pre {
+  white-space: pre-wrap;
+  font-size: 16px;
+  color: #333;
+  background-color: #e9ecef;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* CSS สำหรับส่วนรูปภาพและ timestamp */
+.result-image {
+  margin-top: -15px;
+  text-align: center;
+}
+
+.result-image img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.result-image img:hover {
+  transform: scale(1.05);
+}
+
+.timestamp {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+/* ปรับแต่ง ToastContainer */
+.Toastify__toast {
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  position: relative; /* เปลี่ยนเป็น relative เพื่อให้ปุ่ม absolute ทำงาน */
+  padding: 10px; /* เพิ่ม padding เพื่อให้ปุ่มมีที่ว่าง */
+}
+
+.Toastify__toast--success {
+  background-color: #f7fff7 !important; /* สีเขียวสำหรับความสำเร็จ */
+}
+
+.Toastify__toast--warning {
+  background-color: #fffaf4 !important; /* สีเหลืองสำหรับคำเตือน */
+}
+
+.Toastify__toast--error {
+  background-color: #fff4f4 !important; /* สีแดงสำหรับข้อผิดพลาด */
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #d3d3d3; /* ขอบเขียวเข้ม */
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f9f9f9; /* พื้นหลังอ่อน */
+  cursor: pointer;
+  transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงแบบสมูท */
+  box-sizing: border-box; /* ควบคุมขนาดรวม padding */
+  outline: none; /* ลบขอบเมื่อ focus เดิม */
+}
+
+input[type="file"]:hover {
+  background-color: #e0e0e0; /* เปลี่ยนพื้นหลังเมื่อ hover */
+  border-color: #67a4ff; /* เปลี่ยนสีขอบเมื่อ hover */
+}
+
+input[type="file"]:focus {
+  border-color: #4a83ff; /* เปลี่ยนสีขอบเมื่อ focus */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* เพิ่มเงาสีเขียวอ่อน */
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  padding: 5px 10px;
+  background-color: #5c7aff; /* ปุ่มเลือกไฟล์สีเขียว */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #0d007e; /* เปลี่ยนสีปุ่มเมื่อ hover */
+}
+
+input[type="file"]::-moz-file-upload-button {
+  padding: 10px 20px;
+  background-color: #b6f4ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="file"]::-moz-file-upload-button:hover {
+  background-color: #c8f0ff;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #4c82af; /* สีเขียวหลัก */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600; /* ตัวหนา */
+  cursor: pointer;
+  transition: all 0.3s ease; /* การเปลี่ยนแปลงแบบสมูท */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เงาเบา ๆ */
+  text-transform: uppercase; /* ตัวอักษรพิมพ์ใหญ่ */
+  letter-spacing: 1px; /* ช่องว่างระหว่างตัวอักษร */
+}
+
+button[type="submit"]:hover {
+  background-color: #4569a0; /* สีเข้มขึ้นเมื่อ hover */
+  transform: translateY(-2px); /* ยกขึ้นเล็กน้อย */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* เงาเข้มขึ้น */
+}
+
+button[type="submit"]:active {
+  background-color: #3d458b; /* สีเข้มมากขึ้นเมื่อกด */
+  transform: translateY(0); /* กลับสู่ตำแหน่งเดิมเมื่อกด */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เงาลดลงเมื่อกด */
+}
+
+button[type="submit"]:focus {
+  outline: none; /* ลบขอบ focus เดิม */
+  box-shadow: 0 0 5px rgba(76, 119, 175, 0.5); /* เงาสีเขียวเมื่อ focus */
+}
