@@ -37,7 +37,7 @@ function App() {
     formData.append('birthYear', birthYear);
 
     try {
-      const response = await axios.post('http://127.0.0.1:1880/api/sol', formData, {
+      const response = await axios.post('http://172.21.20.191:1880/api/sol', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -55,7 +55,7 @@ function App() {
 
       // เพิ่ม timestamp ใน image_url
       const timestamp = new Date().getTime(); // ดึง timestamp เป็น milliseconds
-      const imageUrlWithTimestamp = `${response.data.image_url || 'http://127.0.0.1:5000/image'}?timestamp=${timestamp}`;
+      const imageUrlWithTimestamp = `${response.data.image_url || 'http://172.21.20.191/image'}?timestamp=${timestamp}`;
 
       setResult({
         message: message,
