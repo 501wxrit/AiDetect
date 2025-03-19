@@ -55,7 +55,7 @@ function App() {
 
       // เพิ่ม timestamp ใน image_url
       const timestamp = new Date().getTime(); // ดึง timestamp เป็น milliseconds
-      const imageUrlWithTimestamp = `${response.data.image_url || 'http://127.0.0.1/image'}?timestamp=${timestamp}`;
+      const imageUrlWithTimestamp = `${response.data.image_url || 'http://127.0.0.1:5000/image'}?timestamp=${timestamp}`;
 
       setResult({
         message: message,
